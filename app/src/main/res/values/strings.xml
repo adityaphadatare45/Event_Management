@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">EventManagement</string>
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="signup">SignUp</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="click_to_login">Click to login</string>
+    <string name="clicl_to_signup">Clicl to signup</string>
+    <string name="click_to_signup">Click to SignUp</string>
+    <string name="logout">Logout</string>
+    <string name="welcome_back">Welcome Back</string>
+</resources>
