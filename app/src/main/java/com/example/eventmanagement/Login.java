@@ -45,15 +45,17 @@ public class Login extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_login);
-        mAuth = FirebaseAuth.getInstance();
+
         editTextEmail = findViewById(R.id.email);
         editTextPassword = findViewById(R.id.password);
          buttonLogin = findViewById(R.id.btn_login);
         progressBar = findViewById(R.id.pbar);
         textView = findViewById(R.id.cts);
+        mAuth = FirebaseAuth.getInstance();
 
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71,6 +73,8 @@ public class Login extends AppCompatActivity {
                 email = String.valueOf(editTextEmail.getText());
                 password = String.valueOf(editTextPassword.getText());
 
+
+                // If anyone tries to login without email and password , this will shows the them msg to enter the email and password
                 if(TextUtils.isEmpty(email)) {
                     Toast.makeText(Login.this, "Enter email", Toast.LENGTH_SHORT).show();
                     progressBar.setVisibility(View.GONE); // Hide progress bar
@@ -82,7 +86,7 @@ public class Login extends AppCompatActivity {
                     progressBar.setVisibility(View.GONE); // Hide progress bar
                     return;
                 }
-
+            //  authetication is done by firebase authetication prebuild methods
                 mAuth.signInWithEmailAndPassword(email, password)
                         .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                             @Override

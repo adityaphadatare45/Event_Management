@@ -11,7 +11,7 @@
     <option name="CLEAR_APP_STORAGE" value="false" />
     <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
     <option name="ACTIVITY_EXTRA_FLAGS" value="" />
-    <option name="MODE" value="launch_deep_link" />
+    <option name="MODE" value="default_activity" />
     <option name="CLEAR_LOGCAT" value="false" />
     <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
     <option name="INSPECTION_WITHOUT_ACTIVITY_RESTART" value="false" />

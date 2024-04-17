@@ -15,16 +15,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:text="@string/welcome_back"
         android:textSize="24dp"
         android:textStyle="bold"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="10dp"
+
         />
 
-    <com.google.android.material.textfield.TextInputLayout
+   <com.google.android.material.textfield.TextInputLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+       android:hint="@string/add">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/ade"
@@ -32,10 +34,10 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:gravity="center"
-            android:text="+"
+
             android:textSize="24dp"
             android:textStyle="bold"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="10dp"
             >
         </com.google.android.material.textfield.TextInputEditText>
     </com.google.android.material.textfield.TextInputLayout>
@@ -43,12 +45,30 @@
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:hint="@string/_1">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/all"
+
             android:layout_width="match_parent"
-            android:layout_height="125dp"
+            android:layout_height="110dp"
             android:layout_marginTop="30dp"
+            android:layout_marginBottom="10dp"
+            >
+
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/_2">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/day"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_marginTop="10dp"
             android:layout_marginBottom="20dp"
             >
 
@@ -56,30 +76,28 @@
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:hint="@string/_3">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/month"
             android:layout_width="match_parent"
-            android:layout_height="125dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
-            >
+            android:layout_height="110dp"
 
-        </com.google.android.material.textfield.TextInputEditText>
-    </com.google.android.material.textfield.TextInputLayout>
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="125dp"
             android:layout_marginTop="20dp">
 
         </com.google.android.material.textfield.TextInputEditText>
     </com.google.android.material.textfield.TextInputLayout>
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="@string/logout"
 
 
+        />
 
 
 </LinearLayout>
