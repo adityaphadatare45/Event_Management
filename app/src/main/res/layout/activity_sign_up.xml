@@ -65,6 +65,14 @@
         android:id="@+id/btn_signup"
         android:text="@string/sign_up"
         android:layout_marginTop="25dp"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FingerPrint Login"
+        android:layout_marginTop="10dp"
+        android:id="@+id/fgr"
+
+        />
 
     <TextView
         android:id="@+id/ctl"

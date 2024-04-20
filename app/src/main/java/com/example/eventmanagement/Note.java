@@ -19,10 +19,15 @@ public class Note {
     }
 
     public String getContent() {
+<<<<<<< HEAD
+=======
+
+>>>>>>> a3a39fa (Commit)
         return content;
     }
 
     public void setContent(String content) {
+<<<<<<< HEAD
         this.content = content;
     }
 
@@ -31,6 +36,19 @@ public class Note {
     }
 
     public void setTimestamp(Timestamp timestamp) {
+=======
+
+        this.content = content;
+    }
+
+    public Timestamp getTimestamp()
+    {
+        return timestamp;
+    }
+
+    public void setTimestamp(Timestamp timestamp)
+    {
+>>>>>>> a3a39fa (Commit)
         this.timestamp = timestamp;
     }
 }

@@ -10,26 +10,19 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
-import com.google.firebase.Firebase;
-import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class SignUp extends AppCompatActivity {
     TextInputEditText editTextEmail, editTextPassword;
-    Button buttonReg;
+    Button buttonReg , buttonFinger;
     FirebaseAuth mAuth;
     ProgressBar progressBar;
     TextView textView;
+
 
     @Override
     public void onStart() {
@@ -54,6 +47,7 @@ public class SignUp extends AppCompatActivity {
         buttonReg = findViewById(R.id.btn_signup);
         progressBar = findViewById(R.id.pbar);
         textView = findViewById(R.id.ctl);
+        buttonFinger = findViewById(R.id.fgr);
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -84,6 +78,8 @@ public class SignUp extends AppCompatActivity {
                     return;
                 }
 
+
+
                 mAuth.createUserWithEmailAndPassword(email, password)
                         .addOnCompleteListener(task -> {
                             progressBar.setVisibility(View.GONE); // Adjusted visibility here
@@ -96,6 +92,14 @@ public class SignUp extends AppCompatActivity {
                                 Toast.makeText(SignUp.this, "Authentication failed.", Toast.LENGTH_SHORT).show();
                             }
                         });
+            }
+        });
+        buttonFinger.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),FingerPrint.class);
+                startActivity(intent);
+                finish();
             }
         });
 

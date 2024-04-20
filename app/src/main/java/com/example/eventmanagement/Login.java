@@ -12,9 +12,6 @@ import android.widget.Toast;
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -25,16 +22,18 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class Login extends AppCompatActivity {
     TextInputEditText editTextEmail, editTextPassword;
-    Button buttonLogin;
+    Button buttonLogin , buttonfinger;
     FirebaseAuth mAuth;
     ProgressBar progressBar;
     TextView textView;
+
 
     @Override
     public void onStart() {
         super.onStart();
         // Check if user is signed in (non-null) and update UI accordingly.
         FirebaseUser currentUser = mAuth.getCurrentUser();
+
         if(currentUser != null){
             Intent intent = new Intent(getApplicationContext(),MainActivity.class);
             startActivity(intent);
@@ -56,6 +55,7 @@ public class Login extends AppCompatActivity {
         progressBar = findViewById(R.id.pbar);
         textView = findViewById(R.id.cts);
         mAuth = FirebaseAuth.getInstance();
+        buttonfinger = findViewById(R.id.fgr);
 
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,7 +69,10 @@ public class Login extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 progressBar.setVisibility(View.VISIBLE);
+                // Declaration and Initialization
+                // Declaration = In Declaration we declare object or variable  type and In Initialization we assign the value to that variable
                 String email , password;
+               // This code snippet helps us to retrive the text entered in the edittext and convert into string and assing to email and password.
                 email = String.valueOf(editTextEmail.getText());
                 password = String.valueOf(editTextPassword.getText());
 
@@ -86,6 +89,10 @@ public class Login extends AppCompatActivity {
                     progressBar.setVisibility(View.GONE); // Hide progress bar
                     return;
                 }
+
+
+
+
             //  authetication is done by firebase authetication prebuild methods
                 mAuth.signInWithEmailAndPassword(email, password)
                         .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -105,6 +112,17 @@ public class Login extends AppCompatActivity {
                         });
             }
         });
+        buttonfinger.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),FingerPrint.class);
+                startActivity(intent);
+                finish();
+            }
+
+
+        });
+
 
     }
 }

@@ -20,7 +20,7 @@
         android:textAlignment="center"
         android:textAppearance="?android:textAppearanceLarge"
         android:textStyle="bold"
-        android:layout_marginBottom="50dp"/>
+        android:layout_marginBottom="10dp"/>
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
@@ -34,7 +34,9 @@
             android:textAppearance="?android:textAppearanceMedium"
             android:textStyle="bold"
             android:gravity="center"
-            android:layout_marginBottom="15dp"/>
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="10dp"
+            />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -67,6 +69,15 @@
         android:text="@string/login"
         android:layout_marginTop="25dp"/>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FingerPrint Login"
+        android:layout_marginTop="10dp"
+        android:id="@+id/fgr"
+
+        />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -76,5 +87,6 @@
         android:textAppearance="?android:textAppearanceMedium"
         android:textStyle="normal"
         android:layout_marginTop="20dp"/>
+
 
 </LinearLayout>
