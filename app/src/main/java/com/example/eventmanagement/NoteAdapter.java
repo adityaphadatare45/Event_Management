@@ -10,11 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
     Context context;
 
     public NoteAdapter(@NonNull FirestoreRecyclerOptions<Note> options, Context context) {
-<<<<<<< HEAD
-        super(options);
-=======
         super();
->>>>>>> a3a39fa (Commit)
         this.context = context;
     }
 
@@ -24,21 +20,12 @@ import androidx.recyclerview.widget.RecyclerView;
         holder.contentTextView.setText(note.content);
         holder.timestampTextView.setText(Utility.timestampToString(note.timestamp));
 
-<<<<<<< HEAD
-        holder.itemView.setOnClickListener((v)->{
-            Intent intent = new Intent(context, Notes.class);
-            intent.putExtra("title",note.title);
-            intent.putExtra("content",note.content);
-            String docId = this.getSnapshots().getSnapshot(position).getId();
-            intent.putExtra("docId",docId);
-=======
         holder.itemView.setOnClickListener((v) -> {
             Intent intent = new Intent(context, Notes.class);
             intent.putExtra("title", note.title);
             intent.putExtra("content", note.content);
             String docId = this.getSnapshots().getSnapshot(position).getId();
             intent.putExtra("docId", docId);
->>>>>>> a3a39fa (Commit)
             context.startActivity(intent);
         });
 
@@ -47,23 +34,6 @@ import androidx.recyclerview.widget.RecyclerView;
     @NonNull
     @Override
     public NoteViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-<<<<<<< HEAD
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recycler_note_adapter,parent,false);
-        return new NoteViewHolder(view);
-    }
-
-    public void stopListening() {
-    }
-
-    public void startListening() {
-    }
-
-    public void notifyDataSetChanged() {
-    }*/
-
-    class NoteViewHolder extends RecyclerView.ViewHolder{
-        TextView titleTextView,contentTextView,timestampTextView;
-=======
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recycler_note_adapter, parent, false);
         return new NoteViewHolder(view);
     }*/
@@ -72,7 +42,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
     class NoteViewHolder extends RecyclerView.ViewHolder {
         TextView titleTextView, contentTextView, timestampTextView;
->>>>>>> a3a39fa (Commit)
 
         public NoteViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -82,7 +51,4 @@ import androidx.recyclerview.widget.RecyclerView;
         }
     }
 
-<<<<<<< HEAD
-=======
 
->>>>>>> a3a39fa (Commit)

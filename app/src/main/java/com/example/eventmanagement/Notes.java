@@ -27,22 +27,14 @@ public class Notes extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notes);
-<<<<<<< HEAD
-
-=======
 // Initialise the objects
->>>>>>> a3a39fa (Commit)
         titleEditText = findViewById(R.id.notes_title_text);
         contentEditText = findViewById(R.id.notes_content_text);
         saveNoteBtn = findViewById(R.id.save);
         pageTitleTextView = findViewById(R.id.page_title);
         deleteNoteTextViewBtn  = findViewById(R.id.delete_note_text_view_btn);
 
-<<<<<<< HEAD
-        //receive data
-=======
         //receive the data from user and save it to the firestore database
->>>>>>> a3a39fa (Commit)
         title = getIntent().getStringExtra("title");
         content= getIntent().getStringExtra("content");
         docId = getIntent().getStringExtra("docId");
@@ -53,11 +45,8 @@ public class Notes extends AppCompatActivity {
 
         titleEditText.setText(title);
         contentEditText.setText(content);
-<<<<<<< HEAD
-=======
 
         // If the user want to edit the notes thet can edit the notes
->>>>>>> a3a39fa (Commit)
         if(isEditMode){
             pageTitleTextView.setText("Edit your note");
             deleteNoteTextViewBtn.setVisibility(View.VISIBLE);
@@ -69,13 +58,9 @@ public class Notes extends AppCompatActivity {
 
     }
 
-<<<<<<< HEAD
-    void saveNote(){
-=======
  // Save the data to database
     void saveNote(){
 
->>>>>>> a3a39fa (Commit)
         String noteTitle = titleEditText.getText().toString();
         String noteContent = contentEditText.getText().toString();
         if(noteTitle==null || noteTitle.isEmpty() ){
@@ -118,11 +103,7 @@ public class Notes extends AppCompatActivity {
 
     }
 
-<<<<<<< HEAD
-    void deleteNoteFromFirebase(){
-=======
    void deleteNoteFromFirebase(){
->>>>>>> a3a39fa (Commit)
         DocumentReference documentReference;
         documentReference = Utility.getCollectionReferenceForNotes().document(docId);
         documentReference.delete().addOnCompleteListener(new OnCompleteListener<Void>() {

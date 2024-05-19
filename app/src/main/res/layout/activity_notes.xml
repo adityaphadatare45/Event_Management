@@ -79,13 +79,8 @@
         android:layout_alignParentBottom="true"
         android:gravity="center"
         android:textSize="18sp"
-<<<<<<< HEAD
-        android:visibility="gone"
-        android:textColor="#FF0000"/>
-=======
         android:visibility="visible"
         android:textColor="@color/black"/>
->>>>>>> a3a39fa (Commit)
 
 
 
